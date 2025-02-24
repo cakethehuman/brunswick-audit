@@ -1,5 +1,5 @@
 words = ["has","kills."]
-with open("lazy type\lazy.txt","r") as f, open("lazy type\lazy2.csv", "w+") as f2:
+with open("lazy type\lazy.txt","r") as f, open("special spikey\lazy2.csv", "w+") as f2:
     f2.write("name,kills\n")
     for i in f:
         update1 = i.replace("kills.","")
