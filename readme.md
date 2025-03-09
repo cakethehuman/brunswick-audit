@@ -10,4 +10,5 @@ This is a repo to analize data in the brunswick regiment [JOIN NOW](https://disc
 - matplotlib
 
 # Special thanks to
-- Spikey
+- Spikey                                           
+- Brunswick                                
