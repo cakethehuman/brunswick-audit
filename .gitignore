@@ -1,4 +1,4 @@
-.env
+token.env
 .env.example
 .env.local
 .env.staging

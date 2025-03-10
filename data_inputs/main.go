@@ -22,6 +22,8 @@ func main() {
 	newText := strings.ReplaceAll(text, "has", ",")
 	newText = strings.ReplaceAll(newText, "kills.", "")
 	newText = strings.ReplaceAll(newText, " ", "")
+	features := "name,avg\n"
+	newText = features + newText
 
 	err = os.WriteFile(newFilePath, []byte(newText), 0644)
 	if err != nil {
