@@ -43,7 +43,7 @@ async def result(ctx):
         description="Result for the week",
         color= random.choice(color_codes)
     )
-    file=discord.File("special spikey/avg.csv")
+    file=discord.File("special spikey/avg2.csv")
     embed.set_footer(text=random.choice(footer_text))
     await ctx.send(embed=embed,file=file)
  
