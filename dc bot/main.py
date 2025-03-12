@@ -11,6 +11,9 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='$', intents=intents)
+
+footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?"]
+
 color_codes = [
     16777215,  # White (#FFFFFF)
     10070709,  # Greyple (#99AAb5)
@@ -27,16 +30,24 @@ color_codes = [
 @bot.event
 async def on_ready():
     print(f'Logged on as {bot.user}!')
-
-@bot.command(name = "test")
-async def test(ctx, arg):
-    await ctx.send(arg)
     
+    
+@bot.command(name='ping')
+async def ping(ctx):
+    await ctx.send(f'```css pong ```')
 @bot.command(name= "result")
+
 async def result(ctx):
-    await ctx.send(file=discord.File("special spikey/avg.csv"))
+    embed = discord.Embed(
+        title="Result",
+        description="Result for the week",
+        color= random.choice(color_codes)
+    )
+    file=discord.File("special spikey/avg.csv")
+    embed.set_footer(text=random.choice(footer_text))
+    await ctx.send(embed=embed,file=file)
  
-    
+
 @bot.command(name='hello')
 async def hello(ctx):
     embed = discord.Embed(title="Hello", 
@@ -82,6 +93,16 @@ async def audit(ctx):
         color= random.choice(color_codes)
     )
     embed.set_footer(text="yea not working yet kinda need to wait")
+    await ctx.send(embed=embed)
+    
+@bot.command(name="update")
+async def update(ctx):
+    embed = discord.Embed(
+        title="Update",
+        description="The new attdance has appear ig",
+        color= random.choice(color_codes)
+    )
+    embed.set_footer(text="will work today?")
     await ctx.send(embed=embed)
 
 bot.run(os.getenv("TOKEN"))
