@@ -32,22 +32,7 @@ async def on_ready():
     print(f'Logged on as {bot.user}!')
     
     
-@bot.command(name='ping')
-async def ping(ctx):
-    await ctx.send(f'```css pong ```')
-@bot.command(name= "result")
-
-async def result(ctx):
-    embed = discord.Embed(
-        title="Result",
-        description="Result for the week",
-        color= random.choice(color_codes)
-    )
-    file=discord.File("special spikey/avg2.csv")
-    embed.set_footer(text=random.choice(footer_text))
-    await ctx.send(embed=embed,file=file)
- 
-
+#Fun commands
 @bot.command(name='hello')
 async def hello(ctx):
     embed = discord.Embed(title="Hello", 
@@ -58,7 +43,19 @@ async def hello(ctx):
     embed.set_author(name="Cake`s audit bot")
 
     await ctx.send(embed=embed)
-
+    
+# Audit commands
+@bot.command(name= "result")
+async def result(ctx):
+    embed = discord.Embed(
+        title="Result",
+        description="Result for the week",
+        color= random.choice(color_codes)
+    )
+    file=discord.File("special spikey/avg2.csv")
+    embed.set_footer(text=random.choice(footer_text))
+    await ctx.send(embed=embed,file=file)
+ 
 @bot.command(name='attendance')
 async def attendance(ctx):
     embed = discord.Embed(
@@ -73,6 +70,19 @@ async def attendance(ctx):
     embed.set_image(url="attachment://attadance_by_name.png")
     await ctx.send(embed=embed,file=file)
     
+@bot.command(name="audit")
+async def audit(ctx):
+    embed = discord.Embed(
+        title="Audit",
+        description="Audit for the week",
+        color= random.choice(color_codes)
+    )
+    embed.set_footer(text="yea not working yet kinda need to wait")
+    await ctx.send(embed=embed)
+    
+
+#help/fuctional commands
+    
 @bot.command(name="cmd")
 async def cmd(ctx):
     embed = discord.Embed(
@@ -85,15 +95,6 @@ async def cmd(ctx):
     embed.add_field(name="$result", value="Shows the result of the week", inline=False)
     await ctx.send(embed=embed)
     
-@bot.command(name="audit")
-async def audit(ctx):
-    embed = discord.Embed(
-        title="Audit",
-        description="Audit for the week",
-        color= random.choice(color_codes)
-    )
-    embed.set_footer(text="yea not working yet kinda need to wait")
-    await ctx.send(embed=embed)
     
 @bot.command(name="update")
 async def update(ctx):

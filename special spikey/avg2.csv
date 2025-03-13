@@ -22,8 +22,8 @@ color_code,name,avg,atd
 🟠,Xernicus,23.0,1
 🔴,Kunfah2012,18.0,1
 The meaning of the colors are:
- :red_circle: = 0-20
- :orange_circle: = 20-34
- :yellow_circle: = 35-44
- :green_circle: = 45-55
- :blue_circle: = 56-100
+ 🔴 = 0-20
+ 🟠 = 20-34
+ 🟡 = 35-44
+ 🟢 = 45-55
+ 🔵 = 56-100
