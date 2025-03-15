@@ -12,7 +12,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?"]
+footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?","Spikey forgort to give me audit","diddydowa","Kazuyuki leading?","james what?"]
 
 color_codes = [
     16777215,  # White (#FFFFFF)
@@ -63,23 +63,12 @@ async def attendance(ctx):
         description="Attendance for the week",
         color= random.choice(color_codes)
     )
-    embed.set_footer(text="Cool looking graph?")
+    embed.set_footer(text=random.choice(footer_text))
     embed.set_author(name="Cake`s audit bot")
     file = discord.File("special spikey/attadance_by_name.png", filename="attadance_by_name.png")
 
     embed.set_image(url="attachment://attadance_by_name.png")
     await ctx.send(embed=embed,file=file)
-    
-@bot.command(name="audit")
-async def audit(ctx):
-    embed = discord.Embed(
-        title="Audit",
-        description="Audit for the week",
-        color= random.choice(color_codes)
-    )
-    embed.set_footer(text="yea not working yet kinda need to wait")
-    await ctx.send(embed=embed)
-    
 
 #help/fuctional commands
     
@@ -93,6 +82,9 @@ async def cmd(ctx):
     embed.add_field(name="$hello", value="Greets the user", inline=False)
     embed.add_field(name="$attendance", value="Shows the attendance for the week", inline=False)
     embed.add_field(name="$result", value="Shows the result of the week", inline=False)
+    embed.add_field(name="$update", value="Shows the update of the week", inline=False)
+    embed.add_field(name="$kda", value="Shows the kda of the week", inline=False)
+    embed.set_footer(text=random.choice(footer_text))
     await ctx.send(embed=embed)
     
     
@@ -103,7 +95,18 @@ async def update(ctx):
         description="The new attdance has appear ig",
         color= random.choice(color_codes)
     )
-    embed.set_footer(text="will work today?")
+    embed.set_footer(text=random.choice(footer_text))
     await ctx.send(embed=embed)
+    
+@bot.command(name="kda")
+async def kda(ctx):
+    embed = discord.Embed(
+        title="KDA",
+        description="AVG kda this week",
+        color= random.choice(color_codes)
+    )
+    file = discord.File("special spikey\kda_info.csv", filename="kda_info.csv")
+    embed.set_footer(text=random.choice(footer_text))
+    await ctx.send(embed=embed,file=file)
 
 bot.run(os.getenv("TOKEN"))
