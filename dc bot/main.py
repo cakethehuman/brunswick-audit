@@ -39,7 +39,7 @@ async def hello(ctx):
                           description=f"Hello, {ctx.author.name}!", 
                           color= random.choice(color_codes)
                           )
-    embed.set_footer(text="this is kinda cool")
+    embed.set_footer(text=random.choice(footer_text))
     embed.set_author(name="Cake`s audit bot")
 
     await ctx.send(embed=embed)
