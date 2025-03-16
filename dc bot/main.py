@@ -5,7 +5,6 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv("dc bot/token.env")
-
         
 intents = discord.Intents.default()
 intents.message_content = True

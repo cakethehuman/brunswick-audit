@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// file paths
 
 	filePath := "data_inputs/data_input.txt"
 	newFilePath := "special spikey/data.csv"
