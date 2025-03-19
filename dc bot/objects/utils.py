@@ -1,3 +1,11 @@
+import discord 
+intents = discord.Intents.default()
+from discord.ext import commands
+
+
+intents.message_content = True
+bot = commands.Bot(command_prefix='$', intents=intents)
+
 footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?","Spikey forgort to give me audit","diddydowa","Kazuyuki leading?","james what?"]
 
 color_codes = [
