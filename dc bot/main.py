@@ -5,16 +5,14 @@ import os
 import random
 from dotenv import load_dotenv
 
-from objects import footer_text,Format,bot
+from objects import footer_text,Format,bot,TOKEN
 
 
-load_dotenv("dc bot/token.env")
         
 @bot.event
 async def on_ready():
     print(f'Logged on as {bot.user}!')
-    
-    
+        
 #Fun commands
 @bot.command(name='hello')
 async def hello(ctx):

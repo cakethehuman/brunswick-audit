@@ -1,11 +1,19 @@
+
+from dotenv import load_dotenv
+
 import discord 
-intents = discord.Intents.default()
 from discord.ext import commands
+#token
+TOKEN = load_dotenv("dc bot/token.env")
 
 
+#DISCORD STUFF
+intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='$', intents=intents)
 
+
+#VARIABLES
 footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?","Spikey forgort to give me audit","diddydowa","Kazuyuki leading?","james what?"]
 
 color_codes = [
