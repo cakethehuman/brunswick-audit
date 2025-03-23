@@ -6,14 +6,12 @@ import random
 from dotenv import load_dotenv
 
 from objects import footer_text,Format,bot,TOKEN
-
-
         
 @bot.event
 async def on_ready():
-    print(f'Logged on as {bot.user}!')
+    print(f'{bot.user} IS ON!')
         
-#Fun commands
+# Fun commands
 @bot.command(name='hello')
 async def hello(ctx):
     embed = Format("Hello","Hello there").command_maker()
