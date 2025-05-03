@@ -16,6 +16,8 @@ bot = commands.Bot(command_prefix='$', intents=intents)
 #VARIABLES
 footer_text = ["Dawn is small","Seabiper","Polko is a guy or girl?","Spikey forgort to give me audit","diddydowa","Kazuyuki leading?","james what?"]
 
+# text
+
 color_codes = [
     16777215,  # White (#FFFFFF)
     10070709,  # Greyple (#99AAb5)

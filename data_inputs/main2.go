@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main2() {
 	// file paths
 
 	filePath := "data_inputs/data_input.txt"
@@ -20,11 +20,9 @@ func main() {
 
 	text := string(content)
 
-	newText := strings.ReplaceAll(text, "has", ",")
-	newText = strings.ReplaceAll(newText, "kills.", "")
-	newText = strings.ReplaceAll(newText, " ", "")
-	
-	features := "name,kills\n"
+	newText := strings.ReplaceAll(text, " ", ",")
+
+	features := "name,kills,death,ast\n"
 	newText = features + newText
 
 	err = os.WriteFile(newFilePath, []byte(newText), 0644)
